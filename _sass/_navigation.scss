@@ -1,0 +1,30 @@
+header {
+	.container {
+		padding-top: 50px;
+		position: relative;
+		z-index: 100;
+	}
+
+	nav {
+		@include columns(16);
+		font-size: 1.3333333333rem;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		ul {
+			margin: 0;
+			padding: 0;
+			float: right;
+			li {
+				display: inline-block;
+				text-align: right;
+			}
+		}
+		a {
+			color: $color-lightgrey;
+			&:hover {
+				color: $color-white;
+				text-decoration: none;
+			}
+		}
+	}
+}
