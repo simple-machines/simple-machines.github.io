@@ -7,11 +7,13 @@ footer {
 		margin: 0;
 		line-height: 4rem;
 
-		color: $color-lightgrey;
-		&:focus,
-		&:hover {
-			color: $color-white;
-			text-decoration: none;
+		a {
+			color: $color-darkgrey;
+			&:focus,
+			&:hover {
+				color: $color-white;
+				text-decoration: none;
+			}
 		}
 	}
 	.contact {
