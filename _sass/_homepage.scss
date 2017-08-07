@@ -246,13 +246,12 @@
 	.icons {
 		@include columns(16);
 		@media (min-width: $screen-sm-min) {
-			@include offset(1);
+			@include offset(4);
 			@include columns(15);
 		}
 		margin-top: 60px;
 		img {
 			float: left;
-			@include columns(8);
 			@media (min-width: $screen-sm-min) {
 				width: auto;
 				&.yow {
