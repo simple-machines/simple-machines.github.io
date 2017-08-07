@@ -1,9 +1,19 @@
 @mixin container() {
-  width: $desktop-container-width;
   padding-right: $desktop-gutter-width / 2;
   padding-left: $desktop-gutter-width / 2;
   margin-right: auto;
   margin-left: auto;
+
+  width: $phone-container-width;
+  @media (min-width: $screen-sm-min) {
+    width: $tablet-container-width;
+  }
+  @media (min-width: $screen-md-min) {
+    width: $laptop-container-width;
+  }
+  @media (min-width: $screen-lg-min) {
+    width: $desktop-container-width;
+  }
 }
 
 @mixin row() {
@@ -13,14 +23,22 @@
 }
 
 @mixin columns($columns) {
-  width: (100%/$desktop-columns)*$columns; 
   position: relative;
   min-height: 1px;
-  padding-right: $desktop-gutter-width / 2;
-  padding-left: $desktop-gutter-width / 2;
   float: left;
+  width: (100%/$desktop-columns)*$columns;
+
+  padding-right: $desktop-gutter-width;
+  padding-left: $desktop-gutter-width;
+  @media (min-width: $screen-sm-min) {
+    padding-right: $desktop-gutter-width / 2;
+    padding-left: $desktop-gutter-width / 2;
+  }
 }
 
 @mixin offset($columns) {
-  margin-left: (100%/$desktop-columns)*$columns;
+  margin-left: 0;
+  @media (min-width: $screen-sm-min) {
+    margin-left: (100%/$desktop-columns)*$columns;
+  }
 }

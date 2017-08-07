@@ -2,29 +2,56 @@
 	.container {
 		position: relative;
 		h1 {
-			padding-top: 90px;
-			@include columns(10);
-			@include offset(1);
-			font-size: 6.6666666667rem;
+		    margin: 0;
+		    font-weight: 700;
+		    font-size: 5.6666666667rem;
+		    line-height: 6.3333333333rem;
+			padding-top: 60px;
+			@include columns(16);
+			@media (min-width: $screen-sm-min) {
+				@include offset(1);
+				@include columns(15);
+			}
+			@media (min-width: $screen-md-min) {
+				@include columns(14);
+			    font-size: 6.6666666667rem;
+			    line-height: 7.3333333333rem;
+				padding-top: 90px;
+			}
+			@media (min-width: $screen-lg-min) {
+				@include columns(10);
+			}
 		}
+
 		h2 {
-			@include columns(8);
-			@include offset(1);
 			padding-top: 40px;
 			font-size: 2.6666666667rem;
 			line-height: 3.8888888889rem;
 			color: $color-lightgrey;
 			margin-top: 0;
+			@include columns(16);
+			@media (min-width: $screen-sm-min) {
+				@include offset(1);
+				@include columns(15);
+			}
+			@media (min-width: $screen-md-min) {
+				@include columns(10);
+			}
+			@media (min-width: $screen-lg-min) {
+				@include columns(8);
+			}
 		}
 	}
 	.background {
-		background: url(/images/hero_image.jpg) no-repeat;
-		@include offset(3);
+		background: url(../images/hero_image.jpg) no-repeat;
 		width: 1000px;
 		height: 640px;
 		position: absolute;
-		// right: -105px;
 		top: -140px;
+		margin-left: -10px;
+		@media (min-width: $screen-sm-min) {
+			@include offset(3);
+		}
 	}
 }
 
@@ -32,32 +59,61 @@
 	font-weight: 500;
 	font-size: 2.6666666667rem;
 	line-height: 3.7777777778rem;
-	padding-top: 250px;
+	
+	padding-top: 150px;
+	@media (min-width: $screen-sm-min) {
+		padding-top: 200px;
+	}
+	@media (min-width: $screen-md-min) {
+		padding-top: 250px;
+	}
 	.inner {
-		@include columns(9);
-		@include offset(4);
+		@include columns(16);
+		@media (min-width: $screen-sm-min) {
+			@include columns(9);
+			@include offset(4);
+		}
 	}
 	h3 {
 		color: $color-white;
 	}
 	p {
 		color: $color-darkgrey;
-		margin-bottom: 220px;
 	}
 }
 
 .specialise {
+	padding-top: 150px;
+	@media (min-width: $screen-sm-min) {
+		padding-top: 180px;	
+	}
 	.sentence {
-		@include columns(11);
-		@include offset(1);
 		font-size: 3.1111111111rem;
 		line-height: 4.4444444444rem;
 		font-weight: 500;
-		margin-bottom: 85px;
+		@include columns(16);
+		@media (min-width: $screen-sm-min) {
+			@include columns(11);
+			@include offset(1);
+		}
 	}
 	.specialties {
+		padding-top: 85px;
 		.specialty {
-			@include columns(4);
+			@include columns(16);
+			
+			@media (min-width: $screen-sm-min) {
+				@include columns(8);
+				&:nth-child(3){
+					clear: left;
+				}
+			}
+			@media (min-width: $screen-md-min) {
+				@include columns(4);
+				&:nth-child(3){
+					clear: none;
+				}
+			}
 			h3 {
 				font-size: 2.6666666667rem;
 				line-height: 3.7777777778rem;
@@ -72,7 +128,10 @@
 }
 
 .partners {
-	padding-top: 100px;
+	padding-top: 50px;
+	@media (min-width: $screen-sm-min) {
+		padding-top: 100px;
+	}
 	.container {
 		position: relative;
 		&:after {
@@ -90,21 +149,53 @@
 	.inner {
 		position: relative;
 		z-index: 20;
-		padding: 50px 0;
 		@extend .clearfix;
+		padding-top: 70px;
+		padding-bottom: 30px;
+		@media (min-width: $screen-sm-min) {
+			padding-top: 90px;
+			padding-bottom: 50px;
+		}
 		h2 {
+			margin: 0px;
 			@include offset(1);
-			margin-top: 40px;
-			margin-bottom: 60px;
+			@include columns(16);
 			color: $color-white;
 			font-size: 3.1111111111rem;
 			line-height: 3.7777777778rem;
 		}
 		.partner-container {
 			@include offset(1);
+			
+			padding-top: 40px;
+			@media (min-width: $screen-sm-min) {
+				padding-top: 60px;
+			}
 		}
 		.partner {
-			@include columns(4);
+			@include columns(16);
+			@media (min-width: $screen-sm-min) {
+				@include columns(5);
+			}
+			@media (min-width: $screen-md-min) {
+				@include columns(4);
+			}
+		}
+		.logo-container {
+			@include offset(1);
+			display: none;
+			@media (min-width: $screen-sm-min) {
+				display: block;
+			}
+		}
+		.logo {
+			@include columns(16);
+			@media (min-width: $screen-sm-min) {
+				@include columns(5);
+			}
+			@media (min-width: $screen-md-min) {
+				@include columns(4);
+			}
 		}
 		h3 {
 			font-size: 2.6666666667rem;
@@ -135,26 +226,39 @@
 	font-size: 2.6666666667rem;
 	font-weight: 500;
 	line-height: 3.7777777778rem;
+
+	padding-top: 80px;
+	@media (min-width: $screen-sm-min) {
+		padding-top: 140px;
+	}
 	.inner {
-		@include columns(9);
-		@include offset(4);
-		margin-top: 140px;
+		@include columns(16);
+		@media (min-width: $screen-sm-min) {
+			@include columns(9);
+			@include offset(4);
+		}
+
 		h2 {
 			color: #fff;
 			font-size: 2.6666666667rem;
 		}
 	}
 	.icons {
-		@include offset(1);
+		@include columns(16);
+		@media (min-width: $screen-sm-min) {
+			@include offset(1);
+			@include columns(15);
+		}
 		margin-top: 60px;
 		img {
 			float: left;
-			&.yow {
-				margin-top: 14px;
-				margin-right: 45px;
-			}
-			&.sydney {
-
+			@include columns(8);
+			@media (min-width: $screen-sm-min) {
+				width: auto;
+				&.yow {
+					margin-top: 14px;
+					margin-right: 45px;
+				}
 			}
 		}
 	}
@@ -165,10 +269,17 @@
 	font-size: 2.6666666667rem;
 	font-weight: 500;
 	line-height: 3.7777777778rem;
+
+	padding-top: 80px;
+	@media (min-width: $screen-sm-min) {
+		padding-top: 140px;
+	}
 	.inner {
-		@include columns(10);
-		@include offset(1);
-		margin-top: 140px;
+		@include columns(16);
+		@media (min-width: $screen-sm-min) {
+			@include columns(10);
+			@include offset(1);
+		}
 		h2 {
 			color: #fff;
 			font-size: 2.6666666667rem;
@@ -177,18 +288,29 @@
 }
 
 .group-image {
-	padding-top: 100px;
-	padding-bottom: 170px;
+	padding-top: 50px;
+	@media (min-width: $screen-sm-min) {
+		padding-top: 100px;
+	}
 	@extend .clearfix;
 	.inner {
 		@extend .clearfix;
-		height: 633px;
 		@include columns(16);
+		@media (min-width: $screen-md-min) {
+			height: 633px;
+		}
 	}
 	img {
 		@extend .clearfix;
-		position: absolute;
-		right: 18.75%
+		height: auto;
+		width:150%;
+		transform: translateX(-25%);
+		@media (min-width: $screen-md-min) {
+			width: auto;
+			transform: translateX(0%);
+			position: absolute;
+			right: 18.75%
+		}
 	}
 }
 
@@ -197,9 +319,17 @@
 	font-size: 2.6666666667rem;
 	font-weight: 500;
 	line-height: 3.7777777778rem;
+
+	padding-top: 80px;
+	@media (min-width: $screen-sm-min) {
+		padding-top: 170px;
+	}
 	.inner {
-		@include columns(10);
-		@include offset(1);
+		@include columns(16);
+		@media (min-width: $screen-sm-min) {
+			@include columns(10);
+			@include offset(1);
+		}
 		h2 {
 			color: #fff;
 			font-size: 2.6666666667rem;

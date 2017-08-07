@@ -11,4 +11,15 @@ $screen-lg-min:	1200px;
 $desktop-columns: 16;
 $desktop-gutter-width: 20px;
 $desktop-container-width: 1120px + $desktop-gutter-width;
-$desktop-column-width: ($desktop-container-width/$desktop-columns)-$desktop-gutter-width;
+
+$laptop-columns: 16;
+$laptop-gutter-width: 20px;
+$laptop-container-width: 860px + $laptop-gutter-width;
+
+$tablet-columns: 16;
+$tablet-gutter-width: 20px;
+$tablet-container-width: 700px + $tablet-gutter-width;
+
+$phone-columns: 16;
+$phone-gutter-width: 20px;
+$phone-container-width: 100%;

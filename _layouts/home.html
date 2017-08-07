@@ -31,24 +31,22 @@ layout: default
           We specialise in end-to-end delivery - from business case analysis, strategy and architecture, to engineering and integration.
         </div>
       </div>
-      <div class="row">
-        <div class="specialties">
-          <div class="specialty">
-            <h3>Strategy &amp; Enterprise Architecture</h3>
-            <p>Working with you to develop a roadmap for the future and an actionable means of getting there, that’s right for your needs, now and in the future.</p>
-          </div>
-          <div class="specialty">
-            <h3>API &amp; Platform Development</h3>
-            <p>Highly resilient, scalable and secure platforms, micro-services and managed services frameworks.</p>
-          </div>
-          <div class="specialty">
-            <h3>Data Engineering &amp; Machine Learning</h3>
-            <p>ELT/ETL, streaming data and real time analytics, data modelling, machine learning and deep learning use cases.</p>
-          </div>
-          <div class="specialty">
-            <h3>Greenfield Application Development</h3>
-            <p>Researching, ideating, validating, architecting and engineering for web and mobile applications.</p>
-          </div>
+      <div class="row specialties">
+        <div class="specialty">
+          <h3>Strategy &amp; Enterprise Architecture</h3>
+          <p>Working with you to develop a roadmap for the future and an actionable means of getting there, that’s right for your needs.</p>
+        </div>
+        <div class="specialty">
+          <h3>API &amp; Platform Development</h3>
+          <p>Highly resilient, scalable and secure platforms, micro-services and managed services frameworks.</p>
+        </div>
+        <div class="specialty">
+          <h3>Data Engineering &amp; Machine Learning</h3>
+          <p>ELT/ETL, streaming data and real time analytics, data modelling, machine learning and deep learning use cases.</p>
+        </div>
+        <div class="specialty">
+          <h3>Greenfield Application Development</h3>
+          <p>Researching, ideating, validating, architecting and engineering for web and mobile applications.</p>
         </div>
       </div>
     </div>
@@ -56,27 +54,39 @@ layout: default
 
   <section class="partners">
     <div class="container">
-      <div class="row">
-        <div class="inner">
+      <div class="inner">
+        <div class="row">
           <h2>Our Partners</h2>
-          <div class="partner-container">
-            <div class="row partner">
+        </div>
+        <div class="partner-container">
+          <div class="row">
+            <div class="partner">
               <h3>Lightbend</h3>
               <p>We are certified Lightbend select system integrator partners and certified trainers. We architect and engineer systems in Scala, Akka and Play. We also provide certified Lightbend training courses in Scala, Akka, Play and Spark.</p>
-              <img src="/images/scala.png" />
-              <img src="/images/akka.png" />
-              <img src="/images/spark.png" class="spark" />
             </div>
             <div class="partner">
               <h3>Confluent</h3>
               <p>We are premier Confluent partners and architect, integrate and engineer streaming data systems with Kafka. We also provide fast track training in Kafka for our clients and the broader engineering community.</p>
-              <img src="/images/kafka.png" />
-              <img src="/images/confluent.png" class="confluent" />
             </div>
             <div class="partner">
               <h3>Amazon</h3>
               <p>We are AWS partners and architect, engineer and deploy systems on AWS. We provide AWS-certified DevOps consultants and architects design, engineer and deploy systems within the AWS eco-system.</p>
-              <img src="/images/aws.png" />
+            </div>
+          </div>
+        </div>
+        <div class="logo-container">
+          <div class="row">
+            <div class="logo">
+              <img src="{{ site.url }}/images/scala.png" />
+              <img src="{{ site.url }}/images/akka.png" />
+              <img src="{{ site.url }}/images/spark.png" class="spark" />
+            </div>
+            <div class="logo">
+              <img src="{{ site.url }}/images/kafka.png" />
+              <img src="{{ site.url }}/images/confluent.png" class="confluent" />
+            </div>
+            <div class="logo">
+              <img src="{{ site.url }}/images/aws.png" />
             </div>
           </div>
         </div>
@@ -95,8 +105,8 @@ layout: default
       </div>
       <div class="row">
         <div class="icons">
-          <img src="images/yow.png" alt="" class="yow" />
-          <img src="images/sydney.png" alt="" class="sydney" />
+          <img src="{{ site.url }}/images/yow.png" alt="" class="yow" />
+          <img src="{{ site.url }}/images/sydney.png" alt="" class="sydney" />
         </div>
       </div>
     </div>
@@ -115,7 +125,7 @@ layout: default
 
   <div class="container group-image">
     <div class="inner">
-      <img src="images/group.jpg" alt="">
+      <img src="{{ site.url }}/images/group.jpg" alt="">
     </div>
   </div>
 
@@ -129,7 +139,5 @@ layout: default
       </div>
     </div>
   </section>
-
-  {% include footer.html %}
 
 </main>
