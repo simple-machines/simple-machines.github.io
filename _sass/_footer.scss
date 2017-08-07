@@ -6,6 +6,13 @@ footer {
 	p {
 		margin: 0;
 		line-height: 4rem;
+
+		color: $color-lightgrey;
+		&:focus,
+		&:hover {
+			color: $color-white;
+			text-decoration: none;
+		}
 	}
 	.contact {
 		@include columns(16);
