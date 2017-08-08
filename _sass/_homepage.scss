@@ -192,12 +192,27 @@
 			}
 		}
 		.logo {
-			@include columns(16);
+			margin: 0px -10px 40px -10px;
 			@media (min-width: $screen-sm-min) {
-				@include columns(5);
+				margin: 0;
 			}
-			@media (min-width: $screen-md-min) {
-				@include columns(4);
+			img {
+				margin: 0 2%;
+				width: 28%;
+				vertical-align: middle;
+				&.spark {
+					margin-top: -15px;
+				}
+				@media (min-width: $screen-sm-min) {
+					margin: 25px 0;;
+					width: auto;
+					&.spark {
+						margin-top: 5px
+					}
+					&.confluent {
+						margin-top: 10px
+					}
+				}
 			}
 		}
 		h3 {
@@ -211,15 +226,6 @@
 			font-size: 2rem;
 			line-height: 3.5555555556rem;
 			margin-bottom: 25px;
-		}
-		img {
-			margin: 25px 0;
-			&.spark {
-				margin-top: 5px
-			}
-			&.confluent {
-				margin-top: 10px
-			}
 		}
 	}
 }
