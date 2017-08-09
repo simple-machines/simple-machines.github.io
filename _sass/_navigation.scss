@@ -1,8 +1,11 @@
 header {
 	.container {
-		padding-top: 50px;
 		position: relative;
 		z-index: 100;
+		padding-top: 20px;
+		@media (min-width: $screen-sm-min) {
+			padding-top: 50px;
+		}
 	}
 
 	nav {

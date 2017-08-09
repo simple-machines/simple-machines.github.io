@@ -141,11 +141,15 @@
 			content: ' ';
 			display: block;
 			background: $color-offblack;
-			position: absolute;
-			top: 0;
 			width: 1000000px;
 			height: 100%;
 			z-index: 10;
+			position: absolute;
+			top: 0;
+			left: -10px;
+			@media (min-width: $screen-sm-min) {
+				left: 0;
+			}
 		}
 	}
 
@@ -254,11 +258,12 @@
 	}
 	.icons {
 		@include columns(16);
+		margin-top: 20px;
 		@media (min-width: $screen-sm-min) {
+			margin-top: 60px;
 			@include offset(4);
 			@include columns(15);
 		}
-		margin-top: 60px;
 		img {
 			float: left;
 			@media (min-width: $screen-sm-min) {
