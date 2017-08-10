@@ -260,7 +260,7 @@
 		@include columns(16);
 		margin-top: 20px;
 		@media (min-width: $screen-sm-min) {
-			margin-top: 60px;
+			margin-top: 20px;
 			@include offset(4);
 			@include columns(15);
 		}
