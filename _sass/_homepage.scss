@@ -209,12 +209,26 @@
 				}
 				@media (min-width: $screen-sm-min) {
 					margin: 25px 0;;
-					width: auto;
+
+					&.scala {
+						width: 122px;
+					}
+					&.akka {
+						width: 141px;
+					}
 					&.spark {
+						width: 116px;
 						margin-top: 5px
 					}
+					&.kafka {
+						width: 131px;
+					}
 					&.confluent {
+						width: 180px;
 						margin-top: 10px
+					}
+					&.aws {
+						width: 129px;
 					}
 				}
 			}
@@ -266,8 +280,8 @@
 		}
 		img {
 			float: left;
+			width: 150px;
 			@media (min-width: $screen-sm-min) {
-				width: auto;
 				&.yow {
 					margin-top: 14px;
 					margin-right: 45px;
