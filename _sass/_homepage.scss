@@ -38,7 +38,7 @@
 				@include columns(10);
 			}
 			@media (min-width: $screen-lg-min) {
-				@include columns(8);
+				@include columns(9);
 			}
 		}
 	}
