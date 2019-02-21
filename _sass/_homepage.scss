@@ -182,7 +182,7 @@
 		.partner {
 			@include columns(16);
 			@media (min-width: $screen-sm-min) {
-				@include columns(5);
+				@include columns(4);
 			}
 			@media (min-width: $screen-md-min) {
 				@include columns(4);
@@ -208,7 +208,7 @@
 					margin-top: -15px;
 				}
 				@media (min-width: $screen-sm-min) {
-					margin: 25px 0;;
+					margin: 25px 0;
 
 					&.scala {
 						width: 122px;
@@ -228,6 +228,9 @@
 						margin-top: 10px
 					}
 					&.aws {
+						width: 129px;
+					}
+					&.microsoft {
 						width: 129px;
 					}
 				}
